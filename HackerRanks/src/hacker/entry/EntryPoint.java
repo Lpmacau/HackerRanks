@@ -1,11 +1,11 @@
 package hacker.entry;
 
-import hacker.algorithm.implementation.AppleAndOrange;
+import hacker.datastructures.arrays.SparseArrays;;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		AppleAndOrange test = new AppleAndOrange();
+		SparseArrays test = new SparseArrays();
 		test.run();
 
 	}
