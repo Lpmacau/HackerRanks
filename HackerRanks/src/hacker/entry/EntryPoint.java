@@ -1,11 +1,11 @@
 package hacker.entry;
 
-import hacker.datastructures.arrays.SparseArrays;;
+import hacker.tutorials.statistics10days.one.Quartiles;;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		SparseArrays test = new SparseArrays();
+		Quartiles test = new Quartiles();
 		test.run();
 
 	}

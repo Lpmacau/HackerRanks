@@ -1,12 +1,12 @@
-package hacker.tutorials.statistics10days;
+package hacker.tutorials.statistics10days.zero;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeMap;
 
 // Calculo da media mediana e moda
-public class Day0MeanMedianMode {
-	public static void main(String args[]) {
+public class MeanMedianMode {
+	public static void run(){
 
 		int[] values = { 64630, 11735, 14216, 99233, 14470, 4978, 73429, 38120, 51135, 67060 };
 

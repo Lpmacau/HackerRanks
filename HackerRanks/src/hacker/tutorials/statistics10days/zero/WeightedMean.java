@@ -1,8 +1,8 @@
-package hacker.tutorials.statistics10days;
+package hacker.tutorials.statistics10days.zero;
 
-public class Day0WeightedMean {
+public class WeightedMean {
 
-	public static void main(String args[]) {
+	public static void run() {
 
 		int[] values = {10,40,30,50,20,10,40,30,50,20 };
 		int[] w = {1,2,3,4,5,6,7,8,9,10};
