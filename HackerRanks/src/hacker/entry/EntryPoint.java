@@ -1,11 +1,11 @@
 package hacker.entry;
 
-import hacker.datastructures.arrays.Array1DPart2;
+import hacker.tutorials.statistics10days.one.InterQuartile;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		Array1DPart2 test = new Array1DPart2();
+		InterQuartile test = new InterQuartile();
 		
 		test.run();
 		
