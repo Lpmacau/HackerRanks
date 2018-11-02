@@ -1,11 +1,11 @@
 package hacker.entry;
 
-import hacker.tutorials.statistics10days.one.InterQuartile;
+import hacker.datastructures.linkedlists.InsertNodeTail;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		InterQuartile test = new InterQuartile();
+		InsertNodeTail test = new InsertNodeTail();
 		
 		test.run();
 		
