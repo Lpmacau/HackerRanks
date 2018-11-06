@@ -1,4 +1,4 @@
-package hacker.algorithm.implementation;
+package hacker.algorithms;
 
 import java.util.Arrays;
 

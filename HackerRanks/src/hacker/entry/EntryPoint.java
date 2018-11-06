@@ -1,15 +1,13 @@
 package hacker.entry;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 
-import hacker.datastructures.JavaList;
-import hacker.datastructures.linkedlists.InsertNodeTail;
+import hacker.algorithms.MigratoryBirds;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		JavaList test = new JavaList();
+		MigratoryBirds test = new MigratoryBirds();
 
 		test.run();
 	}
