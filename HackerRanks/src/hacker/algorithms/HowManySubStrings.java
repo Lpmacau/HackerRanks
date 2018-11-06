@@ -1,15 +1,23 @@
 package hacker.algorithms;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import hacker.entry.Executable;
 
 public class HowManySubStrings {
 	public void run() {
 		String s = "aabaa";
 		
 		int[][] q = {{1,1},{1,4},{1,1},{1,4},{0,2}};
+
+		int a[] = countSubstrings(s, q);
 		
-		System.out.println(countSubstrings(s, q));
+		char[] as = new char[10];
+		
+		
+		Arrays.stream(a).forEach(x -> System.out.println(x));
 		
 	}
 
@@ -21,25 +29,39 @@ public class HowManySubStrings {
 
 		int nQueries = queries.length;
 		int[] res = new int[nQueries];
-
+		Object[][] strs = new Object[nQueries][nQueries];
+		Set<String> one;
+		int[][] res2 = new int[nQueries][nQueries];
+		int min,max;
 		
-		for(int i = 0; i<nQueries; i++) {
-			
-			int min = queries[i][0];
-			int max = queries[i][1];
-			
-			Set<String> str = new HashSet<String>();
-			for(int j=max+1; j>min; j--) {
+		
+		for(int i = 0; i<s.length(); i++) {
+			for(int j = i; j<s.length(); j++) {
+				String sub = s.substring(i, j+1);
 				
-				for(int k=min; k<j ; k++) {
-					String sub = s.substring(k, j);
-					if(!str.contains(sub))
-						str.add(sub);
+				for(int[] a : queries) {
+					min = a[0];
+					max = a[1];
+					if(i >= min && j <= max) {
+						
+						if(strs[min][max] == null) {
+							one =  new HashSet<String>();
+							one.add(sub);
+							strs[min][max] = one;
+							res2[min][max] = 1;
+						}
+						else {
+							one = (HashSet<String>) strs[min][max];
+							if(one.add(sub)) res2[min][max]++;
+						}
+					
+					}
 				}
-				
 			}
-			res[i] = str.size();
-			
+		}
+		
+		for(int k = 0; k<nQueries;k++) {
+			res[k] = res2[queries[k][0]][queries[k][1]]	;
 		}
 		
 		
