@@ -2,13 +2,13 @@ package hacker.entry;
 
 import java.util.Arrays;
 
-import hacker.algorithms.HowManySubStrings;
+import hacker.algorithms.ElectronicsShop;
 import hacker.algorithms.MigratoryBirds;
 
 public class EntryPoint {
 
 	public static void main(String[] args) {
-		HowManySubStrings test = new HowManySubStrings();
+		ElectronicsShop test = new ElectronicsShop();
 
 		test.run();
 	}
